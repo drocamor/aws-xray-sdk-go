@@ -3,5 +3,10 @@ language: go
 go:
    - "1.9"
 
+
+before_install:
+  - cd ../..
+  - mv drocamor aws
+  - cd aws/aws-xray-sdk-go
 install: go get -t ./...
 script: go test ./...
